@@ -1,0 +1,6 @@
+%%[IF not empty(@PhoneNumber) then]%% 
+Tel: <a href="tel:%%=v(@PhoneNumber)=%%">%%=v(@PhoneNumber)=%%</a><br>
+%%[ENDIF]%% 
+%%[ IF not empty(@EmailAddress) then]%% 
+E_mail: <a href="mailto:%%=v(@EmailAddress)=%%">%%=v(@EmailAddress)=%%</a><br>
+%%[ENDIF]%%
