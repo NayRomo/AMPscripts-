@@ -1,0 +1,6 @@
+%%[VAR @today, @year, @plusOneYear 
+SET @today= Now(1) 
+SET @plusOneYear = DateAdd(@today, 1, "Y") 
+SET @year= datePart(@plusOneYear, "Y") ]%% 
+
+%%= v(@year) =%%
