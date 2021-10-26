@@ -1,0 +1,6 @@
+%%[IF NOT EMPTY(@LastName) AND NOT EMPTY(@FirstName) THEN]%
+%%%=ProperCase(@FirstName)=%% 
+%%=ProperCase(@LastName)=%% Guten tag, 
+%%[ELSE]%% 
+Guten tag,
+%%[ENDIF]%%
