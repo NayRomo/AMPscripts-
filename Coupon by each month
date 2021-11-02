@@ -1,0 +1,21 @@
+/* Setting the current month and year and rows lookup */
+
+SET @CurrentMonthYear = Format(Now(),"M-yy"))
+SET @dataExtension = 'Birthday_Coupons'
+SET @whereCol = 'Month_Year'
+SET @whereValue = @CurrentMonthYear
+SET @rows = LookupRows(@dataExtension, @whereCol, @whereValue)
+
+/* check if @rowCount has at least one row*/
+for @i = 1 to RowCount(@rows) do
+
+ /* select first row */
+ SET @row = Row(@rows, @i)
+
+ /* get field values from the row */
+ SET @name = Field(@row,'Month_Year')
+ SET @code = Field(@row,'Code')
+ SET @Validity = Field(@row,'Validity')
+ 
+ next @i
+]%%
