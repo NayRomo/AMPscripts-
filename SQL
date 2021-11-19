@@ -1,25 +1,29 @@
 SELECT DISTINCT 
-AccountID,		
-OYBAccountID,	
-JobID,
-ListID,	
-BatchID,	
-SubscriberID,	
-SubscriberKey,		
-EventDate, 
-IsUnique,
-Domain,	
-BounceCategoryID,
-BounceCategory,
-BounceSubcategoryID,	
-BounceSubcategory,	
-BounceTypeID,		
-BounceType,
-SMTPBounceReason,
-SMTPMessage,
-TriggererSendDefinitionObjectID,
-TriggeredSendCustomerKey
+AccountID, Number 		
+OYBAccountID,	Number Nullable
+JobID, Number
+ListID,	Number
+BatchID,	Number
+SubscriberID,	Number
+SubscriberKey, Number Primary Key		
+EventDate, Date
+IsUnique, Boolean
+Domain,	text
+BounceCategoryID, Number
+BounceCategory, text Nullable
+BounceSubcategoryID, Number Nullable
+BounceSubcategory, Text Nullable
+BounceTypeID,	Number
+BounceType, Number Nullable
+SMTPBounceReason, text Nullable
+SMTPMessage, text Nullable
+TriggererSendDefinitionObjectID,text Nullable
+TriggeredSendCustomerKey text Nullable
 FROM _Bounce 
 where 
 BounceCategory = 'Hard Bounce' 
 and IsUnique = 1
+
+
+
+all 256 lenght
