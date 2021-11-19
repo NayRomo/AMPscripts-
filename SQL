@@ -1,0 +1,25 @@
+SELECT DISTINCT 
+AccountID,		
+OYBAccountID,	
+JobID,
+ListID,	
+BatchID,	
+SubscriberID,	
+SubscriberKey,		
+EventDate, 
+IsUnique,
+Domain,	
+BounceCategoryID,
+BounceCategory,
+BounceSubcategoryID,	
+BounceSubcategory,	
+BounceTypeID,		
+BounceType,
+SMTPBounceReason,
+SMTPMessage,
+TriggererSendDefinitionObjectID,
+TriggeredSendCustomerKey
+FROM _Bounce 
+where 
+BounceCategory = 'Hard Bounce' 
+and IsUnique = 1
