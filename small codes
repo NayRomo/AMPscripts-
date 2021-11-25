@@ -1,0 +1,5 @@
+%%[ Var @Remarks Set @Remarks= AttributeValue("Information__c:Remarks__c") IF NOT EMPTY (@Remarks) THEN ]%%
+Wichtige Infos, die Sie uns mitteilen möchten: (Itis a block)
+%%=v(@Remarks)=%%
+
+%%[ELSE]%%%%[ ENDIF ]%%
